@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Main from './Main';
-import Cv from './cv/Cv';
+import Nav from './Nav';
+import Footer from './Footer';
 
-const App = () => {
-    return(
-        <div className='container'>
-            <Main />
-            <Cv />
-        </div>
-    );
-};
+class App extends Component { 
+    render() {
+        return(
+            <div className='container'>
+                <Nav />
+                <Footer />        
+            </div>
+        );
+    }
+}
 
 export default App;
