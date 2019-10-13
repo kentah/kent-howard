@@ -31,51 +31,9 @@ app.use('/tags', routes.tags);
 const eraseDatabaseOnSync = false;
 
 sequelize.sync().then(() => {
-    //if(eraseDatabaseOnSync) {
-    //    createUsersWithPosts();
-    //}
 
     app.listen(PORT, () => {
         console.log(`Server running on ${PORT}`)
     });
 });
 
-//const createUsersWithPosts = async () => {
-//    await models.User.create(
-//        {
-//            username: 'kentah',
-//            posts: [
-//                {
-//                    title: 'Worked on this project',
-//                    content: 'All the things said about working on this project',
-//                },
-//            ],
-//        },
-//        {
-//            include: [models.Posts],
-//        },
-//    );
-//    await models.User.create(
-//        {
-//            username: 'theCreator',
-//            posts: [
-//                {
-//                    title: 'Happy to release...',
-//                    content: 'This will show how happy we are to release.'
-//                },
-//                {
-//                    title: 'Published complete....',
-//                    content: 'Totally complete now.....or is it?'
-//                },
-//            ],
-//        },
-//        {
-//            include: [models.Posts],
-//        },
-//    );
-//};
-
-//app.listen(process.env.PORT, () => 
-//    console.log(`Server running on port: ${process.env.PORT}`),
-//);
-//
